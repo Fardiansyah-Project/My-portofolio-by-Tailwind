@@ -25,12 +25,12 @@ window.onscroll = function () {
 };
 
 // Click out area navbar
-// window.addEventListener('click', function (e) {
-//   if(e.target != hamburger && e.target != navMenu) {
-//     hamburger.classList.remove("hamburger-active");
-//     navMenu.classList.add("hidden");
-//   }
-// });
+window.addEventListener('click', function (e) {
+   if(e.target != hamburger && e.target != navMenu) {
+   hamburger.classList.remove("hamburger-active");
+   navMenu.classList.add("hidden");
+   }
+});
 
 // Darkmode function
 const darkButton = document.querySelector("#dark_togle");
