@@ -11,6 +11,7 @@
         localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
       )
     </script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <!-- Header -->
@@ -57,16 +58,16 @@
     <!-- End Header -->
 
     <!-- Hero Section -->
-    <section id="home" class="pt-36 dark:bg-dark">
+    <section id="home" class="group pt-36 dark:bg-dark">
       <div class="container">
         <div class="flex flex-wrap">
-          <div class="w-full self-center px-4 lg:w-1/2">
+          <div class="w-full self-center px-4 lg:w-1/2 transition duration-500 delay-100 opacity-0 scale-0" id="animation1">
             <h1 class="text-base font-semibold text-primary md:text-xl lg:text-2xl">Hi 🙌, My name is <span class="block font-bold text-dark text-4xl lg:text-5xl dark:text-white">Fardiansyah</span></h1>
             <h2 class="font-medium text-slate-600 text-lg mb-5 lg:text-2xl dark:text-slate-400">Web & Mobile Developer</h2>
             <p class="font-medium text-secondary mb-10 leading-relaxed dark:text-slate-400">Keep learning until learning becomes your <span class="text-dark font-bold dark:text-slate-100">hobby</span></p>
             <a href="#" class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full hover:shadow-xl hover:bg-cyan-600 transition duration-200 ease-in-out">Contact Me</a>
           </div>   
-          <div class="w-full self-end px-4 lg:w-1/2">
+          <div class="w-full self-end px-4 lg:w-1/2 transition duration-300 delay-300 opacity-0 scale-0" id="animation2">
             <div class="relative mt-10 lg:mt-10 sm:12 lg:right-0 rounded-xl h-100 w-100 lg:h-50 lg:w-50 ">
               <img src="img/foto.png" alt="Fardiansyah" class="max-w-full mx-auto mb-4 bg-primary rounded-full" />
               <span class="absolute -bottom-0 -z-10 left-1/2 -translate-x-1/2 md:scale-100">
@@ -79,15 +80,15 @@
     <!-- End Hero Section -->
 
     <!-- About Section -->
-    <section id="about" class="pt-36 pb-32 dark:bg-slate-800">
+    <section id="about" class="group pt-36 pb-32 dark:bg-slate-800">
       <div class="container">
         <div class="flex flex-wrap">
-          <div class="w-ful px-4 mb-10 lg:w-1/2">
+          <div class="w-ful px-4 mb-10 lg:w-1/2" data-aos="fade-right" data-aos-delay="300">
             <h4 class="font-bold uppercase text-primary mb-3">About Me</h4>
             <h2 class="font-bold text-dark text-3xl mb-4 max-w-md lg:text-4xl dark:text-slate-100">Building a website using frameworks</h2>
             <p class="text-base font-medium text-secondary max-w-xl lg:text-lg dark:text-slate-400">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem asperiores alias fugit dolores, officiis quia voluptatum.</p>
           </div>
-          <div class="w-full px-4 lg:w-1/2">
+          <div class="w-full px-4 lg:w-1/2" data-aos="fade-right" data-aos-delay="100">
             <h3 class="font-semibold text-dark text-2xl mb-4 lg:text-3xl lg:pt-10 dark:text-slate-100">Follow Me</h3>
             <p class="font-medium text-base text-secondary mb-6 lg:text-lg dark:text-slate-400">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum dignissimos ipsam illo ex vitae laboriosam maxime, voluptatum reprehenderit!</p>
             <div class="flex items-center">
@@ -133,7 +134,7 @@
     <!-- Gallery -->
     <section id="gallery" class="pt-36 pb-16 bg-slate-100 dark:bg-dark">
       <div class="container">
-        <div class="w-full px-4">
+        <div class="w-full px-4" data-aos="zoom-in">
           <div class="max-w-xl mx-auto text-center mb-16">
             <h4 class="font-semibold text-lg uppercase text-primary mb-2 lg:text-2xl">Gallery</h4>
             <h2 class="font-bold text-3xl text-dark dark:text-slate-100 mb-4 sm:text-4xl lg:text-5xl dark:text-slate-100">Project Inside</h2>
@@ -141,14 +142,14 @@
           </div>
         </div>
         <div class="w-full px-4 flex flex-wrap justify-center lg:w-10/12 lg:mx-auto">
-          <div class="mb-12 p-4 md:w-1/2">
+          <div class="mb-12 p-4 md:w-1/2" data-aos="zoom-in-down" data-aos-duration="1500" data-aos-delay="100">
             <div class="rounded-md shadow-md overflow-hidden">
               <img src="img/gallery/Screenshot (2).png" alt="My Portofolio" />
             </div>
             <h3 class="font-semibold text-xl text-dark dark:text-slate-100 mt-5 mb-3">My Portofolio with Bootstrap</h3>
             <p class="font-medium text-base text-secondary dark:text-slate-400">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo, ullam illum molestiae numquam molestias impedit?</p>
           </div>
-          <div class="mb-12 p-4 md:w-1/2">
+          <div class="mb-12 p-4 md:w-1/2" data-aos="zoom-in-down" data-aos-duration="1500" data-aos-delay="100">
             <div class="rounded-md shadow-md overflow-hidden">
               <img src="img/gallery/Screenshot (4).png" alt="My Portofolio" />
             </div>
@@ -156,14 +157,14 @@
             <p class="font-medium text-base text-secondary dark:text-slate-400">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo, ullam illum molestiae numquam molestias impedit?</p>
           </div>
           <div class="mb-12 p-4 md:w-1/2">
-            <div class="rounded-md shadow-md overflow-hidden">
+            <div class="rounded-md shadow-md overflow-hidden" data-aos="zoom-in-down" data-aos-duration="1500" data-aos-delay="300">
               <img src="img/gallery/Screenshot (1).png" alt="My Portofolio" />
             </div>
             <h3 class="font-semibold text-xl text-dark dark:text-slate-100 mt-5 mb-3">Learn React Native</h3>
             <p class="font-medium text-base text-secondary dark:text-slate-400">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo, ullam illum molestiae numquam molestias impedit?</p>
           </div>
           <div class="mb-12 p-4 md:w-1/2">
-            <div class="rounded-md shadow-md overflow-hidden">
+            <div class="rounded-md shadow-md overflow-hidden" data-aos="zoom-in-down" data-aos-duration="1500" data-aos-delay="300">
               <img src="img/gallery/Screenshot (3).png" alt="My Portofolio" />
             </div>
             <h3 class="font-semibold text-xl text-dark dark:text-slate-100 mt-5 mb-3">Register form</h3>
@@ -178,25 +179,25 @@
     <section id="skills" class="pt-36 pb-32 bg-slate-700 dark:bg-slate-500">
       <div class="container">
         <div class="w-full px-4">
-          <div class="mx-auto text-center mb-16">
+          <div class="mx-auto text-center mb-16" data-aos="fade-up"  data-aos-duration="1000" data-aos-delay="100">
             <h4 class="font-semibold text-lg uppercase text-primary mb-2 uppercase lg:text-2xl">Skills</h4>
             <h2 class="font-bold text-3xl text-white mb-4 sm:text-4xl lg:text-5xl">Programing Language</h2>
             <p class="font-medium text-md text-secondary md:text-lg dark:text-slate-800">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt nulla sapiente saepe atque voluptatem in, labore nostrum earum inventore provident?</p>
           </div>
         </div>
         <div class="w-full px-3">
-          <div class="flex flex-wrap items-center justify-center">
-            <a href="#" class="max-w-[120px] mx-4 py-4 grayscale opacity-70 transition duration-200 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8" >
+          <div class="flex flex-wrap items-center justify-center" data-aos="fade-up"  data-aos-duration="1000" data-aos-delay="150">
+            <a href="#" class="max-w-[120px] mx-4 py-4 grayscale opacity-70 transition duration-200 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
               <img src="img/svg/Python.svg.png" width="70"alt="Python Language">
             </a>
             <a href="#" class="max-w-[120px] mx-4 py-4 grayscale opacity-70 transition duration-200 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8" >
-              <img src="img/svg/c++.svg.png" width="70"alt="Python Language">
+              <img src="img/svg/c++.svg.png" width="70"alt="C++ Language">
             </a>
             <a href="#" class="max-w-[120px] mx-4 py-4 grayscale opacity-70 transition duration-200 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8" >
-              <img src="img/svg/js.svg.png" width="70"alt="Python Language">
+              <img src="img/svg/js.svg.png" width="70"alt="Javascript Language">
             </a>
             <a href="#" class="max-w-[120px] mx-4 py-4 grayscale opacity-70 transition duration-200 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8" >
-              <img src="img/svg/php.svg.png" width="70"alt="Python Language">
+              <img src="img/svg/php.svg.png" width="70"alt="Php Language">
             </a>
           </div>
         </div>
@@ -209,7 +210,7 @@
      <section id="contact" class="pt-36 pb-32 dark:bg-slate-800">
       <div class="container">
         <div class="w-full px-4">
-          <div class="mx-auto text-center mb-16">
+          <div class="mx-auto text-center mb-16" data-aos="fade-down"  data-aos-duration="1000" data-aos-delay="100">
             <h4 class="font-semibold text-lg uppercase text-primary mb-2 uppercase lg:text-2xl uppercase">Contact</h4>
             <h2 class="font-bold text-3xl text-dark mb-4 sm:text-4xl lg:text-5xl dark:text-slate-100">Contact Us</h2>
             <p class="font-medium text-md text-secondary md:text-lg dark:text-slate-400">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt nulla sapiente saepe atque voluptatem in, labore nostrum earum inventore provident?</p>
@@ -217,19 +218,19 @@
         </div>
 
         <div class="w-full lg:w-2/3 lg:mx-auto">
-          <div class="w-full px-4 mb-8">
+          <div class="w-full px-4 mb-8" data-aos="fade-right"  data-aos-duration="900" data-aos-delay="150" data-aos-easing="ease-in-sine">
             <label for="name" class="text-base font-bold text-primary">Name</label>
             <input type="text" name="name-text" id="name" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 border-primary" >
           </div>
-          <div class="w-full px-4 mb-8">
+          <div class="w-full px-4 mb-8" data-aos="fade-left"  data-aos-duration="900" data-aos-delay="150" data-aos-easing="ease-in-sine">
             <label for="email" class="text-base font-bold text-primary">Email</label>
             <input type="email" name="email-input" id="email" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 border-primary" >
           </div>
-          <div class="w-full px-4 mb-8">
+          <div class="w-full px-4 mb-8" data-aos="fade-right"  data-aos-duration="900" data-aos-delay="300" data-aos-easing="ease-in-sine">
             <label for="text-area" class="text-base font-bold text-primary">Message</label>
             <textarea type="email" name="text-input" id="text-area" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 border-primary h-32" ></textarea>
           </div>
-          <div class="w-full px-4">
+          <div class="w-full px-4" data-aos="fade-left"  data-aos-duration="900" data-aos-delay="300" data-aos-easing="ease-in-sine">
             <button class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full w-full  hover:bg-cyan-700 hover:shadow-lg transition duration-200">Submit</button>
           </div>
         </div>
@@ -311,6 +312,13 @@
       <a href="#home" id="back_button" class="fixed bottom-4 right-4 z-[9999] h-10 w-10 bg-primary flex justify-center items-center rounded-full hover:animate-pulse ">
         <img src="img/svg/chevrons-up.svg" alt="">
       </a>
+
     <script src="src/js/script.js"></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
