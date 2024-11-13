@@ -78,7 +78,7 @@ if (localStorage.theme === "dark" || (!('theme' in localStorage) && window.match
 
   document.addEventListener('scroll', function() {
     const animation2 = document.getElementById('animation2');
-    const sectionPosition = animation1.getBoundingClientRect().top;
+    const sectionPosition = animation2.getBoundingClientRect().top;
     const screenHeight = window.innerHeight;
 
     if (sectionPosition < screenHeight && sectionPosition > 1) {
