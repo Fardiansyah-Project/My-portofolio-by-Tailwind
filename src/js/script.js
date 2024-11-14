@@ -12,7 +12,6 @@ window.onscroll = function () {
   const header = document.querySelector("header");
   const fixedNav = header.offsetTop;
   const backButon= document.querySelector("#back_button");
-  const id= document.querySelector("#home-section");
 
   if (window.pageYOffset > fixedNav) {
     header.classList.add("nav-fixed");
@@ -59,37 +58,23 @@ if (localStorage.theme === "dark" || (!('theme' in localStorage) && window.match
 
   // Animation scroll
   document.addEventListener('scroll', function() {
-    const animation1 = document.getElementById('animation1');
-    const sectionPosition = animation1.getBoundingClientRect().top;
-    const screenHeight = window.innerHeight;
-
-    if (sectionPosition < screenHeight && sectionPosition > 1) {
-      animation1.classList.add('opacity-100');
-      animation1.classList.remove('opacity-0');
-      animation1.classList.add('scale-100');
-      animation1.classList.remove('scale-0');
-    } else {
-      animation1.classList.add('opacity-0');
-      animation1.classList.remove('opacity-100');
-      animation1.classList.add('scale-0');
-      animation1.classList.remove('scale-100');
+    // Fungsi untuk menangani animasi elemen
+    function handleAnimation(elementId) {
+      const element = document.getElementById(elementId);
+      const sectionPosition = element.getBoundingClientRect().top;
+      const screenHeight = window.innerHeight;
+  
+      if (sectionPosition < screenHeight && sectionPosition > 1) {
+        // Menghilangkan kelas untuk memunculkan elemen
+        element.classList.remove('opacity-0', 'scale-0');
+      } else {
+        // Menambahkan kelas untuk menyembunyikan elemen
+        element.classList.add('opacity-0', 'scale-0');
+        element.classList.remove('opacity-100', 'scale-100');
+      }
     }
-  });
-
-  document.addEventListener('scroll', function() {
-    const animation2 = document.getElementById('animation2');
-    const sectionPosition = animation2.getBoundingClientRect().top;
-    const screenHeight = window.innerHeight;
-
-    if (sectionPosition < screenHeight && sectionPosition > 1) {
-      animation2.classList.add('opacity-100');
-      animation2.classList.remove('opacity-0');
-      animation2.classList.add('scale-100');
-      animation2.classList.remove('scale-0');
-    } else {
-      animation2.classList.add('opacity-0');
-      animation2.classList.remove('opacity-100');
-      animation2.classList.add('scale-0');
-      animation2.classList.remove('scale-100');
-    }
+  
+    // Panggil fungsi untuk setiap elemen yang diinginkan
+    handleAnimation('animation1');
+    handleAnimation('animation2');
   });
